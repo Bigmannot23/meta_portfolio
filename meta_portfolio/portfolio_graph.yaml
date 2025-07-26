@@ -1,0 +1,127 @@
+projects:
+- description: Bring a senior reviewer into every pull request. This GitHub Action
+    uses ChatGPT to review your diffs, flagging bugs, style issues and security risks
+    so you can merge confidently without burning time.
+  id: ai_code_review_bot
+  name: AI Code Review Bot
+  repo: https://github.com/Bigmannot23/ai_code_review_bot
+- description: Turn job descriptions into tailored applications on autopilot. The
+    pipeline parses job postings, scores fit, generates custom resumes and cover letters
+    and logs each application so you can apply to more roles with less effort.
+  id: job_offer_factory_autorun
+  name: Job Offer Factory
+  repo: https://github.com/Bigmannot23/job_offer_factory_autorun
+- description: Reduce ramp-up time for new team members and customers. This retrieval-augmented
+    Q&A system indexes your internal docs, FAQs and SOPs so users can ask plain-language
+    questions and get accurate answers instantly.
+  id: Onboarding_Assistant
+  name: Onboarding Assistant
+  repo: https://github.com/Bigmannot23/Onboarding_Assistant
+- description: Ensure provable compliance. Lexvion logs evidence of every workflow
+    with cryptographic signatures, bundles the results and provides a self-serve trust
+    center so regulators and customers can verify your practices without manual spreadsheets.
+  id: lexvion
+  name: Lexvion Compliance Engine
+  repo: https://github.com/Bigmannot23/lexvion
+- description: A modular options trading system that connects data ingestion, signal
+    stacking, order preparation and human-in-the-loop execution. By combining automation
+    with operator oversight, it enables disciplined, audit-ready trading.
+  id: lexvion_trading_bot_full_auto
+  name: Lexvion Trading Bot
+  repo: https://github.com/Bigmannot23/lexvion_trading_bot_full_auto
+- description: Quickly score leads with a simple, secure API. This FastAPI microservice
+    accepts contact details and returns a quality score to prioritize outreach.
+  id: operators-leadscore-api
+  name: Operators Leadscore API
+  repo: https://github.com/Bigmannot23/operators-leadscore-api
+- description: Turn messy job-search data into actionable KPIs. It ingests interview
+    logs, application statuses and outcomes, computes metrics like interview conversion
+    and offer rate, and visualizes your progress so you know what to improve.
+  id: operator_metrics_dashboard
+  name: Operator Metrics Dashboard
+  repo: https://github.com/Bigmannot23/operator_metrics_dashboard
+relationships:
+- from: ai_code_review_bot
+  to: job_offer_factory_autorun
+- from: ai_code_review_bot
+  to: Onboarding_Assistant
+- from: ai_code_review_bot
+  to: lexvion
+- from: ai_code_review_bot
+  to: lexvion_trading_bot_full_auto
+- from: ai_code_review_bot
+  to: operators-leadscore-api
+- from: ai_code_review_bot
+  to: operator_metrics_dashboard
+- from: job_offer_factory_autorun
+  to: ai_code_review_bot
+- from: job_offer_factory_autorun
+  to: Onboarding_Assistant
+- from: job_offer_factory_autorun
+  to: lexvion
+- from: job_offer_factory_autorun
+  to: lexvion_trading_bot_full_auto
+- from: job_offer_factory_autorun
+  to: operators-leadscore-api
+- from: job_offer_factory_autorun
+  to: operator_metrics_dashboard
+- from: Onboarding_Assistant
+  to: ai_code_review_bot
+- from: Onboarding_Assistant
+  to: job_offer_factory_autorun
+- from: Onboarding_Assistant
+  to: lexvion
+- from: Onboarding_Assistant
+  to: lexvion_trading_bot_full_auto
+- from: Onboarding_Assistant
+  to: operators-leadscore-api
+- from: Onboarding_Assistant
+  to: operator_metrics_dashboard
+- from: lexvion
+  to: ai_code_review_bot
+- from: lexvion
+  to: job_offer_factory_autorun
+- from: lexvion
+  to: Onboarding_Assistant
+- from: lexvion
+  to: lexvion_trading_bot_full_auto
+- from: lexvion
+  to: operators-leadscore-api
+- from: lexvion
+  to: operator_metrics_dashboard
+- from: lexvion_trading_bot_full_auto
+  to: ai_code_review_bot
+- from: lexvion_trading_bot_full_auto
+  to: job_offer_factory_autorun
+- from: lexvion_trading_bot_full_auto
+  to: Onboarding_Assistant
+- from: lexvion_trading_bot_full_auto
+  to: lexvion
+- from: lexvion_trading_bot_full_auto
+  to: operators-leadscore-api
+- from: lexvion_trading_bot_full_auto
+  to: operator_metrics_dashboard
+- from: operators-leadscore-api
+  to: ai_code_review_bot
+- from: operators-leadscore-api
+  to: job_offer_factory_autorun
+- from: operators-leadscore-api
+  to: Onboarding_Assistant
+- from: operators-leadscore-api
+  to: lexvion
+- from: operators-leadscore-api
+  to: lexvion_trading_bot_full_auto
+- from: operators-leadscore-api
+  to: operator_metrics_dashboard
+- from: operator_metrics_dashboard
+  to: ai_code_review_bot
+- from: operator_metrics_dashboard
+  to: job_offer_factory_autorun
+- from: operator_metrics_dashboard
+  to: Onboarding_Assistant
+- from: operator_metrics_dashboard
+  to: lexvion
+- from: operator_metrics_dashboard
+  to: lexvion_trading_bot_full_auto
+- from: operator_metrics_dashboard
+  to: operators-leadscore-api
